@@ -14,6 +14,13 @@
 		321F789220EBB90100EFD66D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321F789020EBB90100EFD66D /* LaunchScreen.storyboard */; };
 		321F789520EBB90100EFD66D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F789420EBB90100EFD66D /* main.m */; };
 		321F789F20EBB90100EFD66D /* DropMenuDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F789E20EBB90100EFD66D /* DropMenuDemoUITests.m */; };
+		321F78B920EBB95600EFD66D /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F78AC20EBB95600EFD66D /* ItemModel.m */; };
+		321F78BA20EBB95600EFD66D /* DropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F78AF20EBB95600EFD66D /* DropMenuView.m */; };
+		321F78BB20EBB95600EFD66D /* DropMenuBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F78B120EBB95600EFD66D /* DropMenuBar.m */; };
+		321F78BC20EBB95600EFD66D /* MenuAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F78B220EBB95600EFD66D /* MenuAction.m */; };
+		321F78BD20EBB95600EFD66D /* MoreFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F78B520EBB95600EFD66D /* MoreFilterView.m */; };
+		321F78BE20EBB95600EFD66D /* OptionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 321F78B620EBB95600EFD66D /* OptionItem.m */; };
+		321F78BF20EBB95600EFD66D /* MoreFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321F78B720EBB95600EFD66D /* MoreFilterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,19 @@
 		321F789A20EBB90100EFD66D /* DropMenuDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropMenuDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		321F789E20EBB90100EFD66D /* DropMenuDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropMenuDemoUITests.m; sourceTree = "<group>"; };
 		321F78A020EBB90100EFD66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		321F78AB20EBB95600EFD66D /* MenuAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuAction.h; sourceTree = "<group>"; };
+		321F78AC20EBB95600EFD66D /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
+		321F78AD20EBB95600EFD66D /* DropMenuBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropMenuBar.h; sourceTree = "<group>"; };
+		321F78AE20EBB95600EFD66D /* DropMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropMenuView.h; sourceTree = "<group>"; };
+		321F78AF20EBB95600EFD66D /* DropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropMenuView.m; sourceTree = "<group>"; };
+		321F78B020EBB95600EFD66D /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
+		321F78B120EBB95600EFD66D /* DropMenuBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropMenuBar.m; sourceTree = "<group>"; };
+		321F78B220EBB95600EFD66D /* MenuAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuAction.m; sourceTree = "<group>"; };
+		321F78B420EBB95600EFD66D /* OptionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionItem.h; sourceTree = "<group>"; };
+		321F78B520EBB95600EFD66D /* MoreFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreFilterView.m; sourceTree = "<group>"; };
+		321F78B620EBB95600EFD66D /* OptionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionItem.m; sourceTree = "<group>"; };
+		321F78B720EBB95600EFD66D /* MoreFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreFilterView.xib; sourceTree = "<group>"; };
+		321F78B820EBB95600EFD66D /* MoreFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreFilterView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +101,7 @@
 		321F788420EBB8FF00EFD66D /* DropMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				321F78A920EBB95600EFD66D /* DropMenuBar */,
 				321F788520EBB8FF00EFD66D /* AppDelegate.h */,
 				321F788620EBB8FF00EFD66D /* AppDelegate.m */,
 				321F788820EBB8FF00EFD66D /* ViewController.h */,
@@ -101,6 +122,42 @@
 				321F78A020EBB90100EFD66D /* Info.plist */,
 			);
 			path = DropMenuDemoUITests;
+			sourceTree = "<group>";
+		};
+		321F78A920EBB95600EFD66D /* DropMenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				321F78AA20EBB95600EFD66D /* DropMenu */,
+				321F78B320EBB95600EFD66D /* CustomView */,
+			);
+			path = DropMenuBar;
+			sourceTree = "<group>";
+		};
+		321F78AA20EBB95600EFD66D /* DropMenu */ = {
+			isa = PBXGroup;
+			children = (
+				321F78AB20EBB95600EFD66D /* MenuAction.h */,
+				321F78B220EBB95600EFD66D /* MenuAction.m */,
+				321F78B020EBB95600EFD66D /* ItemModel.h */,
+				321F78AC20EBB95600EFD66D /* ItemModel.m */,
+				321F78AD20EBB95600EFD66D /* DropMenuBar.h */,
+				321F78B120EBB95600EFD66D /* DropMenuBar.m */,
+				321F78AE20EBB95600EFD66D /* DropMenuView.h */,
+				321F78AF20EBB95600EFD66D /* DropMenuView.m */,
+			);
+			path = DropMenu;
+			sourceTree = "<group>";
+		};
+		321F78B320EBB95600EFD66D /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				321F78B420EBB95600EFD66D /* OptionItem.h */,
+				321F78B520EBB95600EFD66D /* MoreFilterView.m */,
+				321F78B620EBB95600EFD66D /* OptionItem.m */,
+				321F78B720EBB95600EFD66D /* MoreFilterView.xib */,
+				321F78B820EBB95600EFD66D /* MoreFilterView.h */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +243,7 @@
 				321F789220EBB90100EFD66D /* LaunchScreen.storyboard in Resources */,
 				321F788F20EBB90100EFD66D /* Assets.xcassets in Resources */,
 				321F788D20EBB8FF00EFD66D /* Main.storyboard in Resources */,
+				321F78BF20EBB95600EFD66D /* MoreFilterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,9 +261,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321F78BA20EBB95600EFD66D /* DropMenuView.m in Sources */,
 				321F788A20EBB8FF00EFD66D /* ViewController.m in Sources */,
+				321F78BE20EBB95600EFD66D /* OptionItem.m in Sources */,
 				321F789520EBB90100EFD66D /* main.m in Sources */,
+				321F78BC20EBB95600EFD66D /* MenuAction.m in Sources */,
+				321F78B920EBB95600EFD66D /* ItemModel.m in Sources */,
 				321F788720EBB8FF00EFD66D /* AppDelegate.m in Sources */,
+				321F78BB20EBB95600EFD66D /* DropMenuBar.m in Sources */,
+				321F78BD20EBB95600EFD66D /* MoreFilterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DropMenuDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DropMenuDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
