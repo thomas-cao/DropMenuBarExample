@@ -22,14 +22,48 @@
     MenuAction *action = [[MenuAction alloc]init];
     action.actionStyle = style;
     action.title = title;
+    action.adjustsImageWhenDisabled = NO;
+    action.adjustsImageWhenHighlighted = NO;
     [action setTitle:title forState:UIControlStateNormal];
     action.titleLabel.font =  [UIFont systemFontOfSize:14];
     action.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     [action setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [action setImage:[UIImage imageNamed:@"btn_sx_down"] forState:UIControlStateNormal];
-    [action setImage:[UIImage imageNamed:@"btn_triangle"] forState:UIControlStateSelected];
-    
+    [action setImage:[self drawTriangleWithFront:YES] forState:UIControlStateNormal];
+    [action setImage:[self drawTriangleWithFront:NO] forState:UIControlStateSelected];
     return action;
+}
+
++ (UIImage *)drawTriangleWithFront:(BOOL)front {
+    CGFloat w = 14;
+    CGFloat h = 10;
+    
+    UIView *triangleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, w, h)];
+    
+    CAShapeLayer *triangleLayer = [[CAShapeLayer alloc]init];
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    if (front) {
+        [path moveToPoint:CGPointMake(w * 0.5, 0)];
+        [path addLineToPoint:CGPointMake(0, h)];
+        [path addLineToPoint:CGPointMake(w, h)];
+        triangleLayer.path = path.CGPath;
+        [triangleView.layer addSublayer:triangleLayer];
+        [triangleLayer setFillColor:[UIColor purpleColor].CGColor];
+    }else {
+        [path moveToPoint:CGPointMake(0, 0)];
+        [path addLineToPoint:CGPointMake(w, 0)];
+        [path addLineToPoint:CGPointMake(w * 0.5, h)];
+        triangleLayer.path = path.CGPath;
+        [triangleView.layer addSublayer:triangleLayer];
+        [triangleLayer setFillColor:[UIColor redColor].CGColor];
+    }
+    
+    triangleView.backgroundColor = [UIColor whiteColor];
+    UIGraphicsBeginImageContextWithOptions(triangleView.frame.size, YES, [UIScreen mainScreen].scale);  //图形上下文设置
+    [triangleView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();//赋值
+    UIGraphicsEndImageContext();//结束
+    
+    return image;
 }
 
 

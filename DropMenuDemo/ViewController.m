@@ -77,6 +77,36 @@
 }
 
 
+- (UIImage *)drawTriangleWithFront:(BOOL)front {
+    UIView *triangleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    triangleView.backgroundColor = [UIColor clearColor];
+    CAShapeLayer *triangleLayer = [[CAShapeLayer alloc]init];
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    if (front) {
+        [path moveToPoint:CGPointMake(20, 20)];
+        [path addLineToPoint:CGPointMake(15, 15)];
+        [path addLineToPoint:CGPointMake(10, 20)];
+        triangleLayer.path = path.CGPath;
+        [triangleView.layer addSublayer:triangleLayer];
+        [triangleLayer setFillColor:[UIColor yellowColor].CGColor];
+    }else {
+        [path moveToPoint:CGPointMake(20, 20)];
+        [path addLineToPoint:CGPointMake(25, 25)];
+        [path addLineToPoint:CGPointMake(30, 20)];
+        triangleLayer.path = path.CGPath;
+        [triangleView.layer addSublayer:triangleLayer];
+        [triangleLayer setFillColor:[UIColor redColor].CGColor];
+    }
+    
+    UIGraphicsBeginImageContextWithOptions(triangleView.frame.size, YES, [UIScreen mainScreen].scale);  //图形上下文设置
+    [triangleView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();//赋值
+    UIGraphicsEndImageContext();//结束
+    
+    return image;
+}
+
+
 
 - (void)creatData {
     
