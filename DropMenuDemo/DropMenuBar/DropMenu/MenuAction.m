@@ -25,7 +25,7 @@
     action.adjustsImageWhenDisabled = NO;
     action.adjustsImageWhenHighlighted = NO;
     [action setTitle:title forState:UIControlStateNormal];
-    action.titleLabel.font =  [UIFont systemFontOfSize:14];
+    action.titleLabel.font =  [UIFont systemFontOfSize:15];
     action.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     [action setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [action setImage:[self drawTriangleWithFront:YES] forState:UIControlStateNormal];
@@ -34,27 +34,29 @@
 }
 
 + (UIImage *)drawTriangleWithFront:(BOOL)front {
-    CGFloat w = 14;
-    CGFloat h = 10;
+    CGFloat w = 12;
+    CGFloat h = 8;
     
     UIView *triangleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, w, h)];
     
     CAShapeLayer *triangleLayer = [[CAShapeLayer alloc]init];
     UIBezierPath *path = [UIBezierPath bezierPath];
     if (front) {
-        [path moveToPoint:CGPointMake(w * 0.5, 0)];
-        [path addLineToPoint:CGPointMake(0, h)];
-        [path addLineToPoint:CGPointMake(w, h)];
-        triangleLayer.path = path.CGPath;
-        [triangleView.layer addSublayer:triangleLayer];
-        [triangleLayer setFillColor:[UIColor purpleColor].CGColor];
-    }else {
         [path moveToPoint:CGPointMake(0, 0)];
         [path addLineToPoint:CGPointMake(w, 0)];
         [path addLineToPoint:CGPointMake(w * 0.5, h)];
         triangleLayer.path = path.CGPath;
         [triangleView.layer addSublayer:triangleLayer];
-        [triangleLayer setFillColor:[UIColor redColor].CGColor];
+        
+        [triangleLayer setFillColor:[UIColor blackColor].CGColor];
+    }else {
+
+        [path moveToPoint:CGPointMake(w * 0.5, 0)];
+        [path addLineToPoint:CGPointMake(0, h)];
+        [path addLineToPoint:CGPointMake(w, h)];
+        triangleLayer.path = path.CGPath;
+        [triangleView.layer addSublayer:triangleLayer];
+         [triangleLayer setFillColor:[UIColor colorWithRed:242/255.0 green:136/255.0 blue:0/255.0 alpha:1/1.0].CGColor];
     }
     
     triangleView.backgroundColor = [UIColor whiteColor];

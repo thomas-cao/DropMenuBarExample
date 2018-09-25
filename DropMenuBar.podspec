@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "DropMenuBar"
-s.version      = "1.0.1"
+s.version      = "1.0.3"
 s.summary      = "A iOS Area multilevel list filtering"
 s.description  = "A iOS Area multilevel list filtering, easy to use it."
 s.homepage     = "https://github.com/xiaocaoge/DropMenuBarExample.git"
@@ -14,6 +14,7 @@ s.source_files  = "DropMenuBar/DropMenu/*.{h,m}"
 
 s.requires_arc  = true
 s.platform     = :ios, "9.0"
+
 
 
 
