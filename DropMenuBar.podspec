@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "DropMenuBar"
-s.version      = "1.0.3"
+s.version      = "1.0.4"
 s.summary      = "A iOS Area multilevel list filtering"
 s.description  = "A iOS Area multilevel list filtering, easy to use it."
 s.homepage     = "https://github.com/xiaocaoge/DropMenuBarExample.git"
